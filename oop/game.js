@@ -104,13 +104,17 @@ console.clear();
 // console.clear();
 // class
 
+
+// we define a class - this is like a blueprint for the player object
 class Player {
+	// the constructor gets called when we create a new player
 	constructor(nameParam, color) {
 		this.cash = 5000;
 		this.position = 0;
 		this.name = nameParam;
 		this.color = color;
 	}
+	// the class can only contain methods
 	greet() {
 		console.log('hello from the player');
 	}
@@ -123,24 +127,14 @@ class Player {
 	}
 }
 const input = 'foo';
+// this is how we create a new player - we instantiate an object - the created object
+// is also called an instance of the player class
 const myPlayer = new Player(input, 'blue');
 myPlayer.age = 37;
 
 const myOtherPlayer = new Player('alice', 'blue');
+// we can call a method on the player object that is defined in the player class
 myPlayer.greet();
 console.log(myPlayer);
 console.log(myOtherPlayer);
 myPlayer.greet();
-
-// const player1 = {
-// 	name: 'Bob',
-// 	color: 'red',
-// 	position: 0,
-// 	cash: 1000,
-// 	move: function () {
-// 		console.log(this);
-// 		dice = 1 + Math.floor(6 * Math.random());
-// 		this.position = (this.position + dice) % squares.length;
-// 		this.cash += squares[this.position];
-// 	}
-// }
